@@ -7,9 +7,8 @@ const bodyParser = require("body-parser")
 
 const app = express();
 
-app.get("", function(req, res){
-    res.write("hello")
-    res.send();
+app.get("/", function(req, res){
+    res.sendFile(__dirname + "/index.html");
 
 });
 
